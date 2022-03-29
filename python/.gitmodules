@@ -1,0 +1,3 @@
+[submodule "17C"]
+	path = 17C/python
+	url = https://github.com/rifk5/17C/python
