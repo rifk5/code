@@ -6,14 +6,16 @@ class Configuration:
         self.parser = configparser.ConfigParser()
         self.filename = filename
         self.init()
+        self.load()
         
     def init(self):
         if os.path.exists(self.filename): return
         
         # Initialize default settings
-        if self.filename == "settings.ini":
+        if self.filename == "assets/settings.ini":
             self.parser["DISPLAY"] = {"width": "700",
-                                      "height": "500"}
+                                      "height": "500",
+                                      "fps": "60"}
         
         self.save()
         self.load()
