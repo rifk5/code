@@ -8,9 +8,12 @@ class Game(State):
         
     def update(self, dt):
         pass
-    
+
     def render(self, display):
+        self.mouse_pos = pygame.mouse.get_pos()
         display.fill((0, 0, 0))
-        self.app.drawText(display, "Game State", self.app.color["WHITE"], self.app.screen_center[0], self.app.screen_center[1])
 
         
+        self.app.drawText(display, "Hover", self.app.color["WHITE"], 
+                          (self.mouse_pos[0], self.mouse_pos[1] - 20),
+                          True)

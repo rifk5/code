@@ -1,4 +1,3 @@
-from numpy import kaiser
 import pygame, os, time
 
 from Configuration import Configuration
@@ -50,7 +49,7 @@ class Application:
                     │      │
                     │      ├── start_button.png
                     │      └── exit_button.png
-                    ├── ...
+                    ├── player/
                     └── ...
         '''
         self.absolute_dir = os.path.join("/home/delarosa/Git/programming/python/pygame/")
@@ -58,12 +57,15 @@ class Application:
         # assets
         self.assets_dir = os.path.join(self.absolute_dir, "assets")
         self.font_dir = os.path.join(self.assets_dir, "fonts")
+
+        # sprites
         self.sprite_dir = os.path.join(self.assets_dir, "sprites")
+        self.player_dir = os.path.join(self.sprite_dir, "player")
         self.button_dir = os.path.join(self.sprite_dir, "buttons")
 
         # font
         self.font = pygame.font.Font(os.path.join(self.font_dir, "slkscr.ttf"), 32)
-        self.font_small = pygame.font.Font(os.path.join(self.font_dir, "slkscr.ttf"), 24)
+        self.font_small = pygame.font.Font(os.path.join(self.font_dir, "slkscr.ttf"), 20)
 
         self.loadConfig()
 
@@ -85,10 +87,11 @@ class Application:
                 if event.key == pygame.K_ESCAPE:
                     self.running = False
 
-    def drawText(self, surface, text, color, x, y):
-        text_surface = self.font.render(text, False, color)
+    def drawText(self, surface, text, color, pos, isSmall):
+        if isSmall: text_surface = self.font_small.render(text, False, color)
+        else: text_surface = self.font.render(text, False, color)
         text_rect = text_surface.get_rect()
-        text_rect.center = (x, y)
+        text_rect.center = pos
         surface.blit(text_surface, text_rect)
 
     def update(self):
