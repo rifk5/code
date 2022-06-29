@@ -1,3 +1,5 @@
+#!/usr/bin/python3
+
 import sys, os
 from PIL import Image
 
@@ -13,18 +15,18 @@ def convertImage(path = str):
     elif file[1] == ".webp":
         img = Image.open(path).convert("RGB")
 
-    # .png    
+    # .png
     elif file[1] == ".png":
         img = Image.open(path).convert("RGB")
-    
-    else: 
+
+    else:
         input("File not image.")
         exit()
-    
+
     img.save(f"{file[0]}.jpg", "jpeg")
 
 try:
-    filepath = sys.argv[1] 
+    filepath = sys.argv[1]
     convertImage(filepath)
 except IndexError:
     input("File not inputted")

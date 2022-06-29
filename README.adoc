@@ -1,7 +1,18 @@
+++++
+<p align="center"><h1>!~[ SCRIPTING ]~!</h1></p>
+++++
 [subs=normal]
 ----
 └── scripting
        │
-       ├── link:./python[*.py*]
-       └── link:./shell[.sh]
+       ├── link:./shell[shell]
+       ├── link:./security[security]
+       └── link:./python[python]
+              │
+              ├── link:./python/security[*security*]
+              │       │
+              │       ├── link:../python/security/arp_poison.py[arp_poison.py]
+              │       └── link:../activities/references[tcp_send.py]
+              ├── link:./heat[pygame]
+              └── link:./slides[**slides**]
 ----
