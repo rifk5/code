@@ -1,17 +1,7 @@
 [subs=normal]
 ----
-└── link:./[scripting]
+└── scripting
        │
-       ├── link:./python[python]
-       ├── link:./[**networking**]
-       ├── link:../../re[re]
-       ├── link:../../security[security]
-       └── link:../../windows[windows]
-              │
-              ├── link:../activities[activities]
-              │       │
-              │       ├── link:../activities/resources[resources]
-              │       └── link:../activities/references[references]
-              ├── link:../heat[heat]
-              └── link:./slides[**slides**]
+       ├── link:./python[*.py*]
+       └── link:./shell[.sh]
 ----
