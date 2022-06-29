@@ -13,6 +13,6 @@
              │        ├── link:./python/security/arp_poison.py[arp_poison.py]
              │        ├── link:./python/security/socket_tcp_send.py[socket_tcp_send.py]
              │        ...
-             ├── link:../python/pygame[pygame]
+             ├── link:./python/pygame[pygame]
              └── link:./python/chess[**chess**]
 ----
