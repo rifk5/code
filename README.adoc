@@ -1,5 +1,7 @@
 ++++
+<b>
 <p align="center">scripting</p>
+</b>
 ++++
 [subs=normal]
 ----
