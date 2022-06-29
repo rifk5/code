@@ -2,7 +2,7 @@
 ----
 └── link:./[scripting]
        │
-       ├── link:.python[python]
+       ├── link:./python[python]
        ├── link:./[**networking**]
        ├── link:../../re[re]
        ├── link:../../security[security]
