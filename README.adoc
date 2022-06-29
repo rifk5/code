@@ -1,5 +1,5 @@
 ++++
-<p align="center"><h1>!~[ SCRIPTING ]~!</h1></p>
+<p align="center">scripting</p>
 ++++
 [subs=normal]
 ----
