@@ -2,7 +2,7 @@
 ----
 └── link:./[scripting]
        │
-       ├── link:./tree/master/python[python]
+       ├── link:.[python]
        ├── link:./[**networking**]
        ├── link:../../re[re]
        ├── link:../../security[security]
